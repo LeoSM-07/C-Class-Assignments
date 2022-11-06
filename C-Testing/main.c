@@ -21,18 +21,18 @@ int main (void) {
     printf("Player Rolled %d + %d = %d \n\n", dice1, dice2, sum);
 
     switch (sum) {
-    case 7:
-    case 11:
-        printf("Player Wins! \n");
-        break;
-    case 2:
-    case 3:
-    case 12:
-        printf("Craps! Player Looses. \n");
-        break;
-    default:
-        printf("Point is %d, game continues:\n\n", sum);
-        rerollDice(sum, sum);
+        case 7:
+        case 11:
+            printf("Player Wins! \n");
+            break;
+        case 2:
+        case 3:
+        case 12:
+            printf("Craps! Player Looses. \n");
+            break;
+        default:
+            printf("Point is %d, game continues:\n\n", sum);
+            rerollDice(sum, sum);
     }
 
 
@@ -50,7 +50,7 @@ void rerollDice(int sum, int score) {
     if (sum == score) {
         printf("\nPlayer Wins! \n");
     } else if (sum == 7) {
-        printf("Player Looses. \n");
+        printf("\nPlayer Looses. \n");
     } else {
         rerollDice(sum, score);
     }
