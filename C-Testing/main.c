@@ -1,81 +1,58 @@
-// Leo
+// Leo Mindlin
 // CS 50
-// Project 4
-// 10/22/2022
+// Project 5
+// 11/05/2022
 
-#include <stdio.h>
+#include<stdio.h>
+#include <time.h>           // for time() function
+#include <stdlib.h>         // for srand() and rand() functions
 
-void MultiplyDivide (double a, double b, double *c, double *d);
-void AmountAboveAverage (int array[20], int arrSize, int arrAverage, int *amountAboveAverage);
-
-void MultiplyDivide (double a, double b, double *c, double *d)
-
-{
-    *c = a/b;
-    *d = a*b;
-}
-
-void AmountAboveAverage (int array[20], int arrSize, int arrAverage, int *amountAboveAverage)
-{
-    int i;
-    int total = 0;
-
-    printf("arrsize: %d \n", arrSize);
-    printf("average:%d \n", arrAverage );
-
-    for(i = 0; i < arrSize; i++) { // Check if each element is above the average
-        if (array[i] > arrAverage) {
-            total++;
-        }
-    }
-
-    *amountAboveAverage = total;
-}
+void rerollDice(int sum, int score);
 
 int main (void) {
+    printf("Leo Mindlin - Project 4: Craps \n\n");
 
-    printf("Léo Mindlin - Project 4\n\n");
+    srand(time(NULL));
 
-// BEGIN PART 1:
-    double a = 3.5;
-    double b = 2.1;
-    double c;
-    double d;
+    int dice1 = (rand() % 6)+1; // Dice 1 number 1-6
+    int dice2 = (rand() % 6)+1; // Dice 2 number 1-6
+    int sum = dice1 + dice2;
 
-    printf("Enter value for a: ");
-    scanf("%lf", &a);
-    printf("Enter value for b: ");
-    scanf("%lf", &b);
+    printf("Player Rolled %d + %d = %d \n\n", dice1, dice2, sum);
 
-    MultiplyDivide(a, b, &c, &d);
-
-    printf("value of c: %f \nvalue of d: %f \n\n\n", c, d);
-
-
-// BEGIN PART 2:
-    int array[20];
-    int i;
-    int v;
-    int sum = 0;
-    int amountAboveAverage;
-
-
-    for (i = 0; i < 20; ++i) { // Get 20 inputs
-        printf("Value %d: ",i+1);
-        scanf("%d", &v);
-        array[i] = v;
+    switch (sum) {
+    case 7:
+    case 11:
+        printf("Player Wins! \n");
+        break;
+    case 2:
+    case 3:
+    case 12:
+        printf("Craps! Player Looses. \n");
+        break;
+    default:
+        printf("Point is %d, game continues:\n\n", sum);
+        rerollDice(sum, sum);
     }
 
-    for(i = 0; i < 20; i++) { // Find the sum of array
-       sum = sum + array[i];
+
+    printf("\nLeo Mindlin - End of Project 4 \n");
+
+}
+
+void rerollDice(int sum, int score) {
+    int dice1 = (rand() % 6)+1; // Dice 1 number 1-6
+    int dice2 = (rand() % 6)+1; // Dice 2 number 1-6
+    sum = dice1 + dice2;
+
+    printf("Player Rolled %d + %d = %d \n", dice1, dice2, sum);
+
+    if (sum == score) {
+        printf("\nPlayer Wins! \n");
+    } else if (sum == 7) {
+        printf("Player Looses. \n");
+    } else {
+        rerollDice(sum, score);
     }
-
-    int average = sum/20;
-
-    AmountAboveAverage(array, 20, average, &amountAboveAverage);
-
-    printf("Amount above average: %d\n", amountAboveAverage);
-
-    return 0;
 
 }
