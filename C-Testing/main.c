@@ -4,8 +4,8 @@
 // 11/05/2022
 
 #include<stdio.h>
-#include <time.h>           // for time() function
-#include <stdlib.h>         // for srand() and rand() functions
+#include<time.h>           // for time() function
+#include<stdlib.h>         // for srand() and rand() functions
 
 void rerollDice(int sum, int score);
 
