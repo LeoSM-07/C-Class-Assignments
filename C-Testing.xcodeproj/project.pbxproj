@@ -25,6 +25,7 @@
 /* Begin PBXFileReference section */
 		4291860E2904DFCA000AB148 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		429769D628D8E8D700779D09 /* C-Testing */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "C-Testing"; sourceTree = BUILT_PRODUCTS_DIR; };
+		42C63C0F2929E396005C3ECE /* Test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Test.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				4291860E2904DFCA000AB148 /* main.c */,
+				42C63C0F2929E396005C3ECE /* Test.txt */,
 			);
 			path = "C-Testing";
 			sourceTree = "<group>";

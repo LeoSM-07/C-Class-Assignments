@@ -5,23 +5,44 @@
 
 #include<stdio.h>
 
-struct Car {
-    char make[30];
+int X = 2;
+int Y = 5;
+void Func1(void);
 
-    double price;
+//int main() {
+//    printf("%d, %d\n", X, Y); // 1
+//    Func1();
+//    printf("%d, %d\n", X, Y); // 3
+//
+//    return 0;
+//}
+//
+//void Func1(void) {
+//    int X =3;
+//
+//    X = X+3;
+//    Y = Y+4;
+//    printf("%d, %d\n", X, Y); // 2
+//}
 
-    int year;
+void Func1(void);
+int main() {
+    Func1();
+    Func1();
 
-    char vin[17];
-};
-
-int main (void) {
-    struct Car x = {"Chevy Impala", 12500.55, 2022, "12345678901234567"};
-
-    printf("Make: %s\n", x.make);
-    printf("Price: %.2f\n", x.price);
-    printf("Vin: %s\n", x.vin);
-    printf("Year: %d\n",x.year);
-
+    return 0;
 }
 
+void Func1(void) {
+    int X1 = 0;
+    auto int X2 = 0;
+    register int X3 = 0;
+    static int X4 = 0;
+
+    X1++;
+    X2++;
+    X3++;
+    X4++;
+
+    printf("%d  %d  %d  %d\n", X1, X2, X3, X4); // 4
+}
