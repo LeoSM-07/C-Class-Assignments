@@ -1,48 +1,43 @@
 // Leo Mindlin
 // CS 50
-// Project 5
-// 11/05/2022
+// Project 6
+// 12/03/2022
 
-#include<stdio.h>
+#include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
 
-int X = 2;
-int Y = 5;
-void Func1(void);
-
-//int main() {
-//    printf("%d, %d\n", X, Y); // 1
-//    Func1();
-//    printf("%d, %d\n", X, Y); // 3
-//
-//    return 0;
-//}
-//
-//void Func1(void) {
-//    int X =3;
-//
-//    X = X+3;
-//    Y = Y+4;
-//    printf("%d, %d\n", X, Y); // 2
-//}
-
-void Func1(void);
 int main() {
-    Func1();
-    Func1();
+    printf("Leo Mindlin - Project 6: Adding Parody Bit \n\n");
+    // Time for random values
+    srand((unsigned int) time(NULL));
 
+    int data[12][8];
+    int k, i, n;
+
+    // Fill array with random bits
+    for (k = 0; k < 12; k++) {
+        for (i = 0; i < 8; i++) {
+            n = rand() % 2;
+            data[k][i] = n;
+        }
+    }
+
+    // Loop over 2D array
+    for (k = 0; k < 12; k++) {
+        n = 0; // The sum of all bits in the byte
+
+        // Print original byte & add the sum
+        for(i = 0; i < 8; i++) {
+            printf("%d ", data[k][i]);
+            n += data[k][i];
+        }
+
+        // Compute and print parody bit
+        printf("\t%d\n", n % 2);
+
+    }
+
+    printf("\nLeo Mindlin - Project 6: End of of Program \n");
     return 0;
-}
-
-void Func1(void) {
-    int X1 = 0;
-    auto int X2 = 0;
-    register int X3 = 0;
-    static int X4 = 0;
-
-    X1++;
-    X2++;
-    X3++;
-    X4++;
-
-    printf("%d  %d  %d  %d\n", X1, X2, X3, X4); // 4
 }
