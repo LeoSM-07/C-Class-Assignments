@@ -1,0 +1,71 @@
+Enter Student's Number: 1
+Enter 2 Quiz Grades (Out of 10 Points):
+7
+10
+Enter Midterm & Final Grades (Out of 100 Points):
+90
+95
+
+Enter Student's Number: 2
+Enter 2 Quiz Grades (Out of 10 Points):
+9
+8
+Enter Midterm & Final Grades (Out of 100 Points):
+90
+80
+
+Enter Student's Number: 3
+Enter 2 Quiz Grades (Out of 10 Points):
+7
+8
+Enter Midterm & Final Grades (Out of 100 Points):
+70
+80
+
+Enter Student's Number: 4
+Enter 2 Quiz Grades (Out of 10 Points):
+5
+8
+Enter Midterm & Final Grades (Out of 100 Points):
+50
+70
+
+Enter Student's Number: 5
+Enter 2 Quiz Grades (Out of 10 Points):
+4
+0
+Enter Midterm & Final Grades (Out of 100 Points):
+40
+35
+
+Records for student 1:
+Quiz Grades: 7, 10
+Midterm & Exam Grades: 90, 95
+Numeric Average: 91.25
+Letter Grade: A
+
+Records for student 2:
+Quiz Grades: 9, 8
+Midterm & Exam Grades: 90, 80
+Numeric Average: 83.75
+Letter Grade: B
+
+Records for student 3:
+Quiz Grades: 7, 8
+Midterm & Exam Grades: 70, 80
+Numeric Average: 76.25
+Letter Grade: C
+
+Records for student 4:
+Quiz Grades: 5, 8
+Midterm & Exam Grades: 50, 70
+Numeric Average: 63.75
+Letter Grade: D
+
+Records for student 5:
+Quiz Grades: 4, 0
+Midterm & Exam Grades: 40, 35
+Numeric Average: 32.50
+Letter Grade: F
+
+Program ended with exit code: 0
